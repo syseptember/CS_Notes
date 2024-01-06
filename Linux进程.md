@@ -888,3 +888,5 @@ Linux中通过`CPU运行队列`实现调度算法。下面我们来看一下运�
 **总结：**
 runqueue中有struct q array[2],active,expired。struct q的结构有int bitmap[5],task_struct* queue[140],nr_active。queue中[0-99]是实时进程，[100-139]是分时进程， 分时进程的task_struct包含存放硬件上下文数据的相关属性。actice指向的进程是正在或即将运行的进程，expired指向的进程是新增的进程或者active中时间片用完的进程，当active->nr_active==0时，即活跃进程执行完毕，交换active指针和expried指针的值即可让之前处于过期进程队列中的进程处于活跃进程中。
 
+---
+
