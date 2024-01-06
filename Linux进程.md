@@ -133,7 +133,7 @@
      >   struct Device
      >   {
      >       //硬件设备的属性
-     >        Device* next;//指向
+     >        Device* next;//指向下一个硬件设备的指针
      >    }
      >    ```
      >   
